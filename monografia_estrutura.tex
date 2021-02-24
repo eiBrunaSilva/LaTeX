@@ -1,0 +1,372 @@
+\documentclass[portuguese,12pt,oneside,a4paper]{book}
+
+% ---------------------------------------------------------------------------- %
+% Pacotes 
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}           % define a linguagem padrão
+\usepackage[utf8x]{inputenc}
+\usepackage[pdftex]{graphicx}           % usamos arquivos pdf/png como figuras
+\usepackage{setspace}                   % espa�amento flex�vel
+\usepackage{makeidx}                    % �ndice remissivo
+\usepackage[nottoc]{tocbibind}          % acrescentamos a bibliografia/indice/conteudo no Table of Contents
+\usepackage{courier}                    % usa o Adobe Courier no lugar de Computer Modern Typewriter
+\usepackage{type1cm}                    % fontes realmente escal�veis
+\usepackage{listings}                   % para formatar c�digo-fonte (ex. em Java)
+\usepackage{titletoc}
+\usepackage[fixlanguage]{babelbib}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry} % margens
+\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black,bookmarksopen=true]{hyperref} % links em preto
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capitulos
+
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\usepackage{color} % colorir texto
+\usepackage{xcolor}
+\usepackage{amsmath} %expressoes matematicas
+\usepackage{pdflscape} %permite mudar orientacao da pagina para paisagem E MUDA NO PDF
+\usepackage{longtable} %permite tabelas que ocupem mais de uma página
+\usepackage{multicol}
+\usepackage{enumitem} %para pode iniciar enumerate em 0
+\usepackage{pdfpages}
+
+
+
+% ---------------------------------------------------------------------------- %
+% Cabe�alhos similares ao TAOCP de Donald E. Knuth
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}{}}
+\renewcommand{\headrulewidth}{0pt}
+
+% ---------------------------------------------------------------------------- %
+\graphicspath{{./figuras/}}             % caminho das figuras (recomend�vel)
+\frenchspacing                          % arruma o espa�o: id est (i.e.) e exempli gratia (e.g.) 
+\urlstyle{same}                         % URL com o mesmo estilo do texto e n�o mono-spaced
+\makeindex                              % para o �ndice remissivo
+\raggedbottom                           % para n�o permitir espa�os extra no texto
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\normalsize
+
+% ---------------------------------------------------------------------------- %
+% Op��es de listing usados para o c�digo fonte
+% Ref: http://en.wikibooks.org/wiki/LaTeX/Packages/Listings
+\lstset{ %
+language=Java,                  % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,	                % adds a frame around the code
+framerule=0.6pt,
+tabsize=2,	                    % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+backgroundcolor=\color[rgb]{1.0,1.0,1.0}, % choose the background color.
+rulecolor=\color[rgb]{0.8,0.8,0.8},
+extendedchars=true,
+xleftmargin=10pt,
+xrightmargin=10pt,
+framexleftmargin=10pt,
+framexrightmargin=10pt
+}
+
+\lstdefinelanguage{blah} % minha linguagem se chama blah
+{
+% Aqui vão os atributos dela. Para ver mais atributos, Google!
+tabsize=2, % o tab possui 2 espaços
+frame=shadowbox,% o tipo de box que usaremos
+%rulesepcolor=\color{lightgrey}, %/ a cor pra fazer o efeito legal da box
+captionpos=b,% o caption do código vai para baixo (botton) o default eh top
+extendedchars=false, % eu usei isso para conseguir colocar expressoes matematicas utilizando o scapeinside tbm
+escapeinside='', % usando aspas, pode-se usar qualquer comando dentro deles
+morekeywords = {if, else, while, do, for, and, or, action, initialize} % palavras reservadas que ficaram em negrito
+} 
+
+
+% ABNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[alf,% Para usar o estilo de citacao alfabetico (seção 9.2 em 6023/2000
+abnt-etal-text=emph,% o et al. vai aparecer em italico
+abnt-and-type=e,% separador de autores com ´e´
+bibjustif,% bibliografia justificada no final
+abnt-etal-cite=3]{abntex2cite} 
+% No caso, a 6023 diz que se deve usar ‘et al.’ para mais de três autores, ou seja, a partir de quatro autores. Então, usarei abnt-etal-cite=3
+\usepackage{cite}%%% NOVO
+
+% ------------ colocar o [fulanclearo 2002] antes da descricao de referencia bibliografica
+\makeatletter
+\renewcommand\@biblabel[1]{[#1]~}% colocar citação na frente da lista de bibliografia
+\renewcommand\citepunct{;~}%%% NOVO
+%\renewcommand{\@biblabel}[1]{[\textbf{#1}]~}
+\makeatother
+\citebrackets[] % fazer com que as citacoes dentro do texto virem colchetes
+% -------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ---------------------------------------------------------------------------- %
+% Corpo do texto
+\begin{document}
+\frontmatter 
+% cabe�alho para as p�ginas das se��es anteriores ao cap�tulo 1 (frontmatter)
+\fancyhead[RO]{{\footnotesize\rightmark}\hspace{2em}\thepage}
+\setcounter{tocdepth}{2}
+\fancyhead[LE]{\thepage\hspace{2em}\footnotesize{\leftmark}}
+\fancyhead[RE,LO]{}
+\fancyhead[RO]{{\footnotesize\rightmark}\hspace{2em}\thepage}
+
+\onehalfspacing  % espa�amento
+
+% ---------------------------------------------------------------------------- %
+% Capa
+
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[scale=0.4]{ifsul} \\
+    \Large Instituto Federal de Educação, Ciência e Tecnologia Sul-rio-grandense\\
+    \textit{Campus} Sapucaia do Sul\\
+    Coordenação do Curso Técnico em Informática\\
+
+    \vspace*{4cm}
+
+    \textbf{\LARGE{TITULO DO TRABALHO}}\\
+    
+    \vspace*{3.5cm}
+    \Large{NOME DO ALUNO}
+    
+    \vskip 3cm
+
+    Orientador: Nome do Orientador\\
+
+    \vskip 3cm
+    
+    \normalsize{Sapucaia do Sul, fevereiro de 2020} \\
+    \textregistered Nome do aluno
+    
+\end{center}
+
+\newpage
+
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[scale=0.4]{ifsul} \\
+    \Large Instituto Federal de Educação, Ciência e Tecnologia Sul-rio-grandense\\
+    \textit{Campus} Sapucaia do Sul\\
+    Coordenação do Curso Técnico em Informática\\
+
+    \vspace*{4cm}
+
+    \textbf{\LARGE{Meu exemplo de TCC}}\\
+    
+    \vspace*{2cm}
+    \Large{Felipe André Zeiser}
+    
+    \vskip 1.5cm
+\end{center}    
+    
+
+
+    \begin{flushright} 
+		\begin{minipage}[left]{0.5\linewidth}
+	
+			Monografia apresentada à Coordenação do Curso Técnico em Informática do IFSul - \textit{Campus} Sapucaia do Sul, como requisito parcial para conclusão do curso Técnico em Informática.\\                                                                
+			
+		\end{minipage}
+                  
+   	\end{flushright}                                
+
+
+\begin{center}    
+
+    \vskip 2cm
+    Orientador: Fulano de Tal\\
+    Co-orientador: Ciclano de Tal
+    \vskip 1.0cm
+
+    \normalsize{Sapucaia do Sul, Fevereiro de 2021}
+\end{center}
+
+\newpage
+
+% ---------------------------------------------------------------------------- %
+% FICHA CATALOGRÁFICA (VERSÃO FINAL/CORRIGDA)
+% ---------------------------------------------------------------------------- %
+
+%\includepdf{ficha-catalografica.pdf} %Incluir a ficha fornecida pela biblioteca do IFSul
+
+
+% ---------------------------------------------------------------------------- %
+% P�gina de rosto (s� para a vers�o final)
+% ---------------------------------------------------------------------------- %
+
+\newpage
+\thispagestyle{empty}
+    \begin{center}
+        
+
+	    \textbf{\LARGE{Meu exemplo de TCC}}\\
+
+        \vspace*{3cm}
+
+    	\textbf{FELIPE ANDRÉ ZEISER}
+    
+    	\vskip 3cm
+
+
+		\rule{10cm}{0.1mm}
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\
+		Orientador
+		
+    	\vskip 2cm
+    			
+		\rule{10cm}{0.1mm}
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\
+		Membro da Banca
+			
+    	\vskip 2cm
+		
+		\rule{10cm}{0.1mm}
+		XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\
+		Membro da Banca
+			
+		\vskip 3cm
+			
+		Sapucaia do Sul, Rio Grande do Sul, Brasil\\
+		Fevereiro/2021
+
+    \end{center}
+\pagebreak
+
+\newpage
+\thispagestyle{empty}
+
+        
+        \vspace*{20.0cm}
+
+        \begin{flushright}
+			Aos meus familiares.
+        \end{flushright}
+
+
+
+\pagebreak
+
+\newpage
+\thispagestyle{empty}
+
+        
+        \vspace*{20.0cm}
+
+        \begin{flushright}
+
+             Alguma frase/pensamento (OPCIONAL)\\
+             Autor\\
+                   
+
+        \end{flushright}
+
+
+
+\pagebreak
+
+
+
+ 
+% % ---------------------------------------------------------------------------- %
+% % Agradecimentos
+
+\chapter*{Agradecimentos}
+
+
+	XXXXXXXXXXXXXXXXXXXXXX
+
+
+\pagebreak
+
+
+% ---------------------------------------------------------------------------- %
+% Resumo
+
+\chapter*{Resumo}
+	XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.\\
+
+\noindent \textbf{Palavras-chave:} XXXXXXXXXXXXXXXXXXX.
+
+
+\pagebreak
+
+
+% ---------------------------------------------------------------------------- %
+
+ \chapter*{Abstract}
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.\\
+
+ \noindent \textbf{Keywords:} XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
+
+
+
+% ---------------------------------------------------------------------------- %
+% Sum�rio
+\tableofcontents    % imprime o sum�rio
+
+
+% ---------------------------------------------------------------------------- %
+\chapter{Lista de Abreviaturas}
+\begin{tabular}{ll}
+	API 	& \textit{Application Programming Interface} \\
+    BPL		& \textit{Bandpass Liftering} (Filtragem passa-faixa)\\
+	CFG 	& \textit{Context-Free Grammar} (Gramática Livre de Contexto)\\
+	CORDIC  & \textit{COordinate Rotation DIgital Computer} \\
+	DARPA	& \textit{Defense Advanced Research Projects Agency}\\
+	DTW 	& \textit{Dynamic Time Warping} (Alinhamento Dinâmico no Tempo)\\
+	SBC 	& Sociedade Brasileira de Computação\\
+
+\end{tabular}
+
+
+
+% ---------------------------------------------------------------------------- %
+% Listas de figuras e tabelas criadas automaticamente
+\listoffigures            
+\listoftables            
+
+
+% ---------------------------------------------------------------------------- %
+% Cap�tulos do trabalho
+\mainmatter
+
+% cabe�alho para as p�ginas de todos os cap�tulos
+\fancyhead[RE,LO]{\thesection}
+
+\onehalfspacing            % espa�amento um e meio
+
+\input cap-introducao        % associado ao arquivo: 'cap-introducao.tex'
+\input cap-modelagem
+\input cap-finais
+
+% ---------------------------------------------------------------------------- %
+% Apêndices e/ou Anexos
+
+\appendix
+\renewcommand{\appendixname}{Apêndice} % Para trocar Apendice por Anexo (Se necessário)
+\setcounter{chapter}{0} % ressetar a contagem
+
+\include{ape-base}
+
+
+% ---------------------------------------------------------------------------- %
+% Bibliografia
+\backmatter \singlespacing   % espa�amento simples
+\bibliographystyle{abntex2-alf}% cita��o bibliogr�fica alpha alpha-ime
+\bibliography{bibliografia}  % associado ao arquivo: 'bibliografia.bib'
+
+
+\end{document}
