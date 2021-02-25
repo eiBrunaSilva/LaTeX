@@ -1,0 +1,428 @@
+%% 
+%% Copyright 2007-2019 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{longtable}
+\usepackage{pdflscape}
+
+
+
+\bibliographystyle{elsarticle-harv}\biboptions{authoryear}
+
+
+\journal{}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+
+
+% \begin{abstract}
+%% Text of abstract
+
+% \end{abstract}
+
+
+
+% \begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+% \end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\section{sentences}
+
+\cite{GUO2019} Utilizou a segmentação de OTSU para remover a maior parte do fundo não-tecido das WSI.
+Utilizou as imagens no espaço HSV. Conseguiu remover cerca de 82\% do fundo.
+
+\cite{YAN2019, DAS2019} Utilizou um método SVD geodesico para normalização dos tons das imagens.
+
+\cite{SABEENABEEVI2019} realizou a normalização das imagens histopatológicas para detecção de mitose utilizando a deconvolução de cores. (mostrar a imagem do artigo Fig.3)
+
+\cite{VO2019} utilizou um método de transformação logarítmica para calcular a densidade óptica de cada imagem. Aplicando um método de composição de valor singular a essa imagem para estimar os graus de liberdade. (A method for normalizing histology slides for quantitative analysis)
+
+\cite{LI2019} utiliza um método proposto por \cite{REINHARD2001} que transforma o espaço de cores RGB para o espaço $l\alpha\beta$, computando a media e o desvio padrão para cada canal do espaço $l\alpha\beta$ e um conjunto de transformações lineares para corresponder à distribuição de cores das imagens de origem e destino. Ao final, converte os resultados para o espaço RGB novamente.
+
+\cite{DAS2019} detectou células candidatas para mitose com segmentação de Otsu no canal B do espaço RGB. Após aplicou a decomposição de Wavelets de dois níveis de Haar para gerar imagens de 21x21 pixels que formaram a base para o treinamento.
+
+\cite{BAKER2018} utilizou aprimoramento de contraste aplicando o Filtro de Desfoque Gaussiano.
+
+\cite{FONDON2018} Não utilizou patches, preferindo a utilização completa das mesmas. Aplicou o realce de contraste nas imagens.
+
+\cite{PAN2018} Normalização apenas por média e desvio padrão das imagens.
+
+\cite{WAN2017a} Utiliza o método proposto por Khan.
+
+Currently, the main technique used in screening programs for breast cancer is mammography \citep{DINIZ2018}. Contudo, dada a variabilidade da patologia cancerigena é dificil de mensurar em imagens radiologicas tradicionais a gravidade da lesão. Desta forma, são coletadas amostras de tecido do tumor para a realização de análise manual por patoligistas. 
+
+O diagnostico a partir de uma imagem patologica é o padrão outro no diagnostico do cancer \cite{YAN2019,BEJNORDI2017}
+
+O processo de análise das imagens histopatologicas sofre com as variações inter e intra observador \cite{MITTAL2019}
+
+
+A coloração mais utilizada é a (H\&E), a hematoxilina colore os núcleos com uma tonalidade azulada, já a eosina dá uma cor avermelhada ao citoplasma \cite{ROY2019}.
+
+
+
+As imagens histopatologicas possuem alta variabilidade visual e falta de anotações de patologistas especialistas \cite{PUERTO2016}
+
+Inconsistencias nas cores são questões importantes na análise de laminas histopatologicas \cite{GANDOMKAR2018a}
+
+
+Imagens histopalógicas incluem muitos clusters e núcleos sobrepostos \cite{BAKER2018}
+
+As lesões intraductais do câncer de mama podem ser sub-divididas em três classes: hiperplasia ductal usual (UDH), hiperplasia ductal atípica (ADH) e carcinoma ductal in situ (DCIS). Diferenciando-se pela agressividade de consequentemente pelo método de tratamento. Enquanto a hiperplasia ductal usual necessita apenas de acompanhamento, a ADH e a DCIS são lesõe que necessitam de procedimentos mais invasivos, como a cirurgia. Diante disso, cerca de 250 mil casos de lesões intraductais são diagnosticadas a cada ano e destes 50\% passam por cirurgias desnecessárias \cite{DUNDAR2011}
+
+
+A classificação das células cancerígenas podem ser subdivididas em dois principais subgrupos: benignas, não invadem o tecido adjacente, malignas, podem ser espalhar para outras áreas do corpo \cite{KARTHIGA2018}
+A contagem de mitose é feita manualmente por um patologista analisando campos de alta potência \cite{WANG2014}.
+
+
+
+Conjunto de dados público anotados é escasso \cite{YAN2019}
+
+Os meios tradicionais de crowdsourcing para rotulação de imagens não podem ser aplicados as imagens médicas por exigirem anos de treinamento profissional e conhecimento do dominio do problema \cite{YAN2019}
+
+A utilização de patches é inevitável devido ao tamanho das imagens \cite{YAN2019}
+
+A variação da cor é um problema nas imagens histopatologicas devido ao uso de diferentes scanners, coloração química variável, reatividade de diferentes fábricantes, lotes de colaração e dependencia do procedimento de coloração \cite{KHAN2014}.
+
+
+
+As cores das imagens histopatologicas transmitem grande quantidade de informações \cite{LI2015}
+
+
+
+A mitose fornece pistas vitais para estimar a agressividade e a taxa de proliferação do tumor \cite{SAHA2018a}.
+
+
+As caracteristicas do núcleo da célula, do citoplasma circundante e a distribuição dos núcleos são indicadores importantes para o câncer \cite{ZHENG2017}.
+
+O armazenamento e a manipulação de imagens histopatologicas na casa dos gigapixels é um desafio \cite{GHAZVINIANZANJANI2019}.
+
+Sistemas de graduação histopatológica totalmente automatizados ainda não estão clinicamente disponíveis \cite{BALAZSI2016}.
+
+
+
+
+
+A maior parte dos trabalhos foi realizada nos núcleos extraídos ou em imagens inteiras usando características texturais, morfológicas e arquitetônicas baseadas na abordagem do aprendizado de máquina tradicional. Vale a pena notar que a maioria das abordagens de classificação acima são realizadas em ampliação de imagem diferente e tamanho de conjunto de dados diferente. Não há padrão de comparação uniforme entre essas abordagens. Mais importante, essas abordagens utilizaram métodos de extração de recursos baseados em artificial, que não apenas exigem enorme esforço e conhecimento de domínio profissional, mas também têm certas dificuldades em extrair recursos diferenciados de alta qualidade. Estes restringiram seriamente a aplicação das abordagens tradicionais de aprendizado de máquina na classificação da imagem patológica do câncer de mama.
+
+
+ Aprendizagem de transferência é um conceito em que os pesos de um modelo pré-treinado são transferidos para outro conjunto de problemas em um conjunto de dados diferente. Um modelo pré-treinado é um modelo já treinado criado para resolver um problema similar. A ideia principal é que as informações provenientes das tarefas de origem para a tarefa de destino podem ser úteis para acelerar o processo de aprendizagem. Com base na natureza do conjunto de dados, é essencial fazer modificações no modelo pré-existente ajustando a rede.
+ 
+ Existem dois tipos de tecido de carcinoma diferentes, incluindo in situ e invasivo. O tipo de tecido in situ refere-se ao tecido contido no interior da ductal-lobular mamária. Por outro lado, as células do carcinoma invasivo se espalham para além da estrutura ductal-lobular mamária. Atualmente, para produzir o diagnóstico correto, o patologista considera características diferentes dentro das imagens, incluindo padrões, texturas e diferentes propriedades morfológicas. Analisar imagens com diferentes fatores de ampliação requer panorâmica, zoom, foco e digitalização de cada imagem em sua totalidade. Esse processo é muito demorado e cansativo; Como resultado, esse processo manual às vezes leva a diagnósticos imprecisos sobre a identificação do câncer de mama.
+ 
+ Devido ao avanço das técnicas de imagem digital na última década, diferentes técnicas de visão computacional e aprendizado de máquina foram aplicadas para analisar as imagens patológicas em uma resolução microscópica. Essas abordagens podem ajudar a automatizar algumas das tarefas relacionadas ao fluxo de trabalho patológico no sistema de diagnóstico. No entanto, um algoritmo de processamento de imagem eficiente e robusto é necessário para uso em práticas clínicas. Infelizmente, as abordagens tradicionais são incapazes de satisfazer a expectativa. Como resultado, ainda estamos longe da aplicação prática da detecção automática do câncer de mama com base em imagens histológicas 
+ 
+ Para diagnosticar adequadamente uma ampla variedade de tipos de câncer de mama, é necessário aplicar um exame médico (comumente realizado por um cirurgião), seguido de uma análise microscópica do tecido mamário. Na primeira etapa desse processo, o médico tem que cortar os materiais da biópsia da seção e depois corá-los usando coloração com hematoxilina e eosina. A solução de hematoxilina liga o ácido desoxirribonucleico (DNA) e destaca os núcleos, enquanto a eosina se liga às proteínas e destaca outras estruturas. No segundo estágio desta análise, os patologistas avaliam biópsias de tecidos visualizando regiões realçadas em imagens digitalizadas usando microscópios. A avaliação de biópsias de tecidos permite a identificação de pistas precoces de biópsias teciduais. No entanto, os patologistas profissionais devem gastar tempo e esforço consideráveis para realizar essa tarefa. O processo de diagnóstico do câncer de mama não é apenas demorado e caro, mas também depende fortemente do conhecimento prévio do patologista e da consistência dos laudos patológicos. A acurácia diagnóstica média dos patologistas é de aproximadamente 75\%
+ 
+ Um recente estudo de concordância para quantificar a magnitude de discordância diagnóstica entre patologistas em amostras de biópsia de mama também demonstrou que a concordância geral entre as interpretações individuais dos patologistas e os diagnósticos de referência derivados de consensos foi de 75,3%
+ 
+J.G. Elmore, G.M. Longton, P.A. Carney, B.M. Geller, T. Onega, A.N.A. Tosteson Diagnostic concordance among pathologists interpreting breast biopsy specimens JAMA (2015)
+
+
+O desempenho da classificação é altamente dependente das informações extraídas das imagens. Usamos recursos relacionados às células da mama e estruturas teciduais globais para representar cada imagem inteira. Em primeiro lugar, porque o arranjo das células cancerígenas é extremamente desordenado e as células cancerígenas têm atipia, como núcleos maiores e morfologia inconsistente, portanto, características de nível celular, incluindo informações sobre os núcleos, como forma e variabilidade, bem como características de organização das células como densidade e morfologia, são usados para diagnosticar se as células são cancerígenas.
+
+As imagens histopatológicas do câncer de mama são imagens de alta resolução de granulação fina que retratam estruturas geométricas ricas e texturas complexas.
+
+Diferentes fatores, como o fabricante de coloração, o tempo de armazenamento e o procedimento de coloração, podem causar variações de coloração nas imagens histopatológicas. Além disso, as configurações da câmera podem desempenhar um papel importante na geração de imagens histológicas não uniformes.
+
+
+As características artesanais ( He et al., 2012 ) usadas pela maioria dos pesquisadores são baseadas em limiar, baseadas em contornos, baseadas em contornos ativos, baseadas em bacias hidrográficas, corte de grafos , etc. As características artesanais visam principalmente segmentar os núcleos de a histopatologia do câncer de mama inteiro (BCa) desliza imagens. Características distintivas são extraídas dos núcleos segmentados para diferenciar entre lâminas malignas e benignas. Em ( Veta et al., 2013 ), a abordagem baseada em simetria radial rápida seguida de segmentação de bacias controlada por marcador foi usada para a extração de núcleos de imagens histopatológicas de câncer de mama. 
+
+Normalmente, os núcleos do tecido maligno são muito maiores que no tecido normal. \cite{ALQUDAH2019}
+
+PROBLEMA COM DATA AUGMENTATION: Até mesmo métodos de última geração são testados em conjuntos de dados de imagem com um baixo número de imagens. Para superar esse problema, os pesquisadores usam amostras da mesma imagem em vez de originais originais. Este fato pode levar a resultados excessivamente otimistas, devido à alta correlação de uma amostra com outra. Além disso, a variabilidade da aparência, característica chave das imagens de H & E, é limitada nesse tipo de teste.
+
+Existe também o problema da reprodutibilidade, pois a histopatologia é uma ciência subjetiva. Isto é verdade especialmente entre patologistas não especializados, onde podemos receber um diagnóstico diferente na mesma amostra. Portanto, há uma demanda insistente por diagnóstico assistido por computador. \cite{BARDOU2018}
+
+
+De acordo com o Nottingham Grading System ( Elston e Ellis, 1991 ), existem três características morfológicas importantes nas lâminas coradas com Hematoxilina e Eosina (H & E) para classificação do câncer de mama . São contagem mitótica, formação de túbulos e pleomorfismo nuclear. Entre eles, a contagem mitótica é o biomarcador mais importante . Patologistasgeralmente procurar por mitose em campos de alta potência (HPFs) manualmente. É uma tarefa demorada e tediosa devido ao grande número de HPFs em uma única lâmina inteira e à alta variação na aparência das células mitóticas. Além disso, o julgamento da célula mitótica é muito subjetivo, dificultando o consenso sobre a contagem mitótica entre os patologistas. Assim, é muito essencial desenvolver métodos de detecção automática , que não só poupem muito tempo, mão de obra e recursos materiais , mas também melhorem a confiabilidade do diagnóstico patológico.
+
+Assim, a detecção automática ROIs com diagnósticos relevantes podem diminuir as cargas de trabalho dos patologistas e, ao mesmo tempo, assegurar que nenhuma região crítica seja negligenciada durante o diagnóstico.
+
+A transformação maligna no tecido mamário afeta o tamanho, a forma e a densidade das células epiteliais, bem como a forma e a organização do tecido epitelial. Como resultado, as propriedades de geometria e espalhamento da glândula são afetadas.\cite{NGUYEN2018}
+
+Atraso no diagnóstico é uma das principais razões para o alto nível de mortalidade em casos de câncer de mama. A classificação manual das imagens histopatológicas do câncer de mama é fadiga, dispendiosa e demorada. Sendo um sistema de segunda opinião, os sistemas CADx reduzem a carga de trabalho de especialistas, contribuindo para a eficiência do diagnóstico e redução de custos.\cite{GUPTA2018}
+
+Os diagnósticos feitos pelos patologistas nos casos são geralmente considerados como o padrão ouro para o tratamento adicional dos pacientes.\cite{GANDOMKAR2018a}
+
+Os patologistas são responsáveis ​​por não só identificar se uma lesão é maligna ou benigna, mas também determinar os subtipos benignos ou cancerígenos, já que ambas as lesões mamárias benignas e malignas abrangem diferentes subcategorias. \cite{GANDOMKAR2018a}
+
+O diagnóstico é estabelecido pelo patologista na escala do paciente, a partir da revisão de várias imagens. Outra decisão também pode ser tomada na escala da imagem: os especialistas podem atribuir um rótulo a uma imagem identificando padrões em áreas específicas nas imagens. No entanto, a anotação de grão fino seria muito cara para ser executada; assim, os conjuntos de dados são rotulados na escala de pacientes ou imagens, mas não na escala de pixels ou regiões. Como esses dados são fracamente rotulados por essência, o paradigma da AMI deve ser mais adequado do que a classificação de instância única. \cite{OLIVEIRA2018}
+
+ O atual protocolo de triagem diagnóstica consiste em uma mamografia para identificar regiões suspeitas da mama, seguida de uma biópsia de áreas potencialmente cancerígenas. 
+ 
+ A biópsia mamária é um procedimento diagnóstico que pode determinar definitivamente se a área suspeita é maligna ou benigna. O diagnóstico patológico de uma biópsia de mama é geralmente considerado como o padrão ouro para o desfecho do paciente e tratamento clínico. \cite{WAN2017b} 
+ 
+ Como a maioria das abordagens atuais de classificação do câncer de mama é baseada na opinião subjetiva dos patologistas, há claramente a necessidade de desenvolver um método automatizado de classificação do câncer que evite a variabilidade inter e intra-leitor, melhorando assim a consistência do processo de tomada de decisão.
+ 
+ 
+ \cite{HAN2017} O primeiro obstáculo é que a engenharia de recursos supervisionada é ineficiente e trabalhosa, com grande carga computacional. As etapas de inicialização e processamento da engenharia de recursos supervisionada também são tediosas e demoradas. Características significativas e representativas estão no cerne de seu sucesso para classificar o câncer de mama. No entanto, a engenharia de recursos é um domínio independente, os recursos relacionados a tarefas são projetados principalmente por especialistas médicos que usam seus conhecimentos para processamento de imagens histopatológicas 7 . Por exemplo, Zhang et al . 8aplicou um método de análise de componentes principais (PCA) de uma classe baseado em características manuais para classificar imagens histopatológicas benignas e malignas de câncer de mama, a precisão alcançou 92\%. Nos últimos anos, foram inventados descritores de características gerais usados ​​para extração de características, por exemplo, transformação de característica invariante de escala (SIFT) 9 , matriz de co-ocorrência de nível de cinza (GLCM) 10 , histograma de gradiente orientado (HOG) 11No entanto, os descritores de características extraem apenas características insuficientes para descrever imagens histopatológicas, tais como características de superfície de baixo nível e não representativas, que não são adequadas para classificadores com capacidade de análise discriminante. Existem várias aplicações que usam descritores de características gerais sobre classificação binária para imagens histopatológicas de câncer de mama. Spanhol et al . 12 usaram um conjunto de dados de imagens histopatológicas de câncer de mama (BreaKHis), e forneceram uma linha de base de taxas de reconhecimento de classificação binária por meio de descritores de características diferentes e diferentes classificadores tradicionais de aprendizado de máquina, a faixa da precisão é de 80\% a 85\%. Com base em quatro formas e 138 descritores de características textuais, Wang et al . 13realizou classificação binária precisa usando um classificador de máquina de vetor de suporte (SVM) 14 . O segundo obstáculo é que as imagens histopatológicas do câncer de mama têm enormes limitações. Oito imagens histopatológicas das classes de câncer de mama são apresentadas na Figura  1 . São imagens de alta resolução de granulação fina de lâminas de biópsia de tecido mamário coradas com hematoxilina e eosina (H & E). Notavelmente, classes diferentes possuem diferenças sutis e células cancerosas têm alta coerência 15 , 16. As diferenças de resolução, contraste e aparências de imagens de mesma classe são sempre maiores em comparação com classes diferentes. Além disso, as imagens histopatológicas de granulação fina apresentam grandes variações, que sempre resultam em dificuldades para distinguir os cânceres de mama. 
+ 
+ A biópsia da mama é um procedimento diagnóstico que pode determinar definitivamente se a área suspeita é maligna (cancerosa) ou benigna (não cancerosa). \cite{WAN2017a}
+ 
+ A contagem mitótica é um dos principais parâmetros na classificação do câncer de mama, pois fornece uma avaliação da proliferação tumoral e da agressividade das lesões mamárias. \cite{WAN2017a}
+ 
+ A determinação da estrutura histológica ajuda a elucidar a biologia espacial do tumor e informar a base patológica do câncer. \cite{NGUYEN2017}
+ 
+ Entre os vários tipos de câncer existentes, o câncer de mama (BC) apresenta duas características muito preocupantes: 1) é o câncer mais comum entre as mulheres no mundo; e 2) apresenta uma taxa de mortalidade muito alta quando comparado a outros tipos de câncer. \cite{SPANHOL2017}
+ 
+ Outro aspecto relevante é que, até recentemente, a maioria dos trabalhos sobre a análise de imagens histopatológicas na CB foi realizada em pequenos conjuntos de dados. Outra desvantagem é que esses conjuntos de dados geralmente não estão disponíveis para a comunidade científica, o que dificulta que outros pesquisadores desenvolvam novos sistemas, pois precisam reunir imagens para compor o conjunto de treinamento, mas também para avaliar os resultados sistemas. \cite{SPANHOL2017}
+ 
+ Os resultados atuais do estado da arte no reconhecimento de BC seguem as duas formas mais comuns de projetar sistemas de reconhecimento de imagem. A abordagem em [3] , a qual geralmente nos referimos como descritores de recursos visuais ou recursos manuais , segue uma abordagem mais “tradicional”, onde uma avaliação da combinação de seis conjuntos de recursos diferentes e quatro classificadores de base é conduzida, e a O sistema final é definido pela combinação que produz os melhores resultados no conjunto de validação. Em contraste, em [4] e [5], as abordagens seguem a tendência de aprendizagem profunda, onde uma Rede Neural de Convolução (CNN) é treinada para o problema de reconhecimento do BC. O primeiro é um método independente de ampliação, baseado em arquiteturas CNN de tarefa única e múltipla. O segundo, aqui referido como CNN do zero ou CNN específico da tarefa , alterna-se na extração de vários pequenos trechos das imagens originais para o treinamento de uma arquitetura específica da CNN. Os resultados relatados mostram claramente que o último pode alcançar taxas de reconhecimento mais altas. No entanto, o desenvolvimento de tal sistema requer um tempo de treinamento mais longo, alguns truques como correções aleatórias [6] para melhorar o desempenho, e ainda muita experiência do desenvolvedor para ajustar o sistema.
+ 
+  \cite{ZHENG2017} diagnóstico final ainda depende atualmente de biópsias
+  
+  o aparecimento do núcleo da célula e do citoplasma circundante, bem como a distribuição dos núcleos, são indicadores importantes para o diagnóstico do câncer. Portanto, tanto a aparência quanto a distribuição dos núcleos são consideradas. cite{https://www.nature.com/articles/nrc1430}
+  
+  No caso de biópsia, um pedaço de tecido é extraído da área afetada usando cirurgia ou outros métodos, como aspiração por agulha fina (PAAF), que é então usado para preparar uma lâmina. As colorações de hematoxilina e eosina (H & E) [3] são usadas no tecido, onde a hematoxilina torna os núcleos azuis enquanto o citoplasma fica cor-de-rosa devido à Eosina. Todos os scanners de imagens de slides são usados ​​para combinar cada visão do tecido sob microscópio (conhecido como High Power Fields (HPF)), em uma imagem chamada Whole Slide Image (WSI) [4]. Essas imagens podem ser usadas para análises adicionais por meio de técnicas de processamento de imagens e também podem ser facilmente armazenadas e transferidas via internet. Diferentes sistemas são utilizados para o diagnóstico com base nessas imagens histopatológicas , mas o sistema de pontuação histológica de Nottingham [5] (também conhecido como sistema de graduação de Elston e Ellis), uma forma modificada da classificação original de Bloom Richardson, é amplamente utilizado entre patologistas. Este sistema de classificação considera três fatores: a quantidade de glândulas normais formadas (formação dos túbulos); deformidade de forma de núcleos (atipia / pleomorfismo); e a taxa na qual as células do tumor se dividem (atividade mitótica). \cite{WAHAB2017}
+  
+  Em geral, a análise precisa das imagens histopatológicas requer examinar as informações no nível das células para um diagnóstico preciso, incluindo células individuais (por exemplo, aparência [4] ,[13] e formas  [14] ) e arquitetura do tecido (por exemplo, topologia e layout de todas as células  [2] ). Essas características abrangem informações locais e holísticas, todas beneficiando a precisão do diagnóstico das imagens histopatológicas. \cite{ZHANG2016}
+  
+  Uma faceta importante do processo diagnóstico é avaliar a agressividade do tumor com base nas propriedades microscópicas do tecido, conforme realizado por um patologista.
+  
+  Os médicos usam o grau histológico, entre outros fatores, para fornecer uma estimativa do prognóstico dos pacientes, isto é, o resultado provável ou o curso do câncer. Além disso, o grau do tumor é usado para desenvolver planos de tratamento específicos do paciente. Se um tumor é bem diferenciado, isto é, o tamanho das células tumorais e a organização do tecido tumoral se assemelham a células e tecidos normais, é provável que ele cresça a uma taxa mais lenta e geralmente tenha uma taxa de sobrevivência melhor. Da mesma forma, os tumores indiferenciados e pouco diferenciados têm células de aspecto anormal e tendem a crescer a uma taxa muito mais alta, com taxas de sobrevida bastante baixas. \cite{KHAN2015}
+  
+  No entanto, mesmo que esses fatores sejam bem explicados, a determinação da malignidade do câncer é uma tarefa muito difícil e depende não apenas da experiência do patologista, mas também de sua mente. Patologistas mais experientes que viram mais casos são mais confiáveis ​​em seu diagnóstico. No entanto, devido ao excesso de trabalho e fadiga, a observação de casos mais semelhantes pode levar a erros de classificação do grau de malignidade. A fim de resolver este problema, apresentamos uma abordagem de classificação automatizada que é capaz de avaliar e atribuir um grau a um tecido de biópsia da PAAF, ou seja, traduzimos o esquema de classificação de Scarff-Bloom-Richardson modificado em um problema de classificação. \cite{KRAWCZYK2016}
+  
+  
+  \section{gq2}
+  
+  \cite{KRAWCZYK2016} estamos lidando com um problema de desequilíbrio de duas classes, que é um problema desafiador no Aprendizado de Máquina
+
+\cite{GUO2019} Métodos de aprendizagem supervisionada são aplicados comumente para análise de imagens médicas, contudo o sucesso na utilização dessas técnicas depende da qualidade dos marcadores dos conjuntos de dados anotados.
+
+Conjunto de dados grandes abertos e rotulados
+
+Uma imagem WSI não pode ser utilizada diretamente em uma rede neural, por conter bilhões de pixels na casa de 100K x 100K pixels.
+
+Diferente dos métodos de classificação, uma rede de segmentação semântica pode classificar cada pixel do patch.
+
+\cite{YAN2019} Devido ao tamanho das imagens a utilização de patches é inevitável, isso devido a limitações de hardware (GPU memory).
+
+\cite{MITTAL2019} Um dos desafios são as diferentes formas de núcleos, aparencia complexa dos tecidos, sobreposição de núcloes, diferença de textura, morfologia e absorção dos corantes pelo núcleo. (Convém mostrar em imagens essa diferença)
+
+\cite{SABEENABEEVI2019} a contagem mitótica é uma característica significativa da proliferação tumoral. (Pode se mostrar imagens da fase da mitose)
+
+A análise de núcleos em imagens histopatológicas é mais difícil devido à aparência visual complexa e irregular dos mesmos, se comparado as imagens citopatológicas.
+
+\cite{VO2019} Um dos desafios na análise da histopatologia do câncer de mama é lidar com uma ampla variedade de seções coradas por hematoxilina e eosina, o que é atribuído às diferenças entre pessoas, diferentes protocolos usados em laboratórios, habilidades dos patologistas em imagens digitalizadas e diferentes procedimentos de coloração.
+
+\cite{FENG2018} (1) núcleos de células de tamanho pequeno e variante aumentam a dificuldade de classificação através do critério de qualidade unitária; (2) ruído e ambigüidade criados por imperfeições nos processos de coloração e imagem diminuem a discriminação entre os núcleos e o tecido associado; (3) artefatos e objetos indesejados introduzidos durante o processo de preparação de slides podem levar a baixa qualidade de imagem em áreas locais. (4) os conjuntos de dados de câncer de mama publicados são geralmente envolvidos em pequena escala e insuficiente de verdade básica.
+
+\cite{PAN2018} No entanto, a detecção robusta de células na imagem patológica é geralmente um problema difícil devido à grande variabilidade. Por exemplo, o tamanho de uma única célula varia muito, aglomerados de células muito grandes, onde três ou mais células se sobrepõem, especialmente as últimas.
+
+ \cite{HAN2017} a multi-classificação do câncer de mama a partir de imagens histopatológicas enfrenta dois desafios principais: (1) as grandes dificuldades nos métodos de multi-classificação do câncer de mama contrastando com a classificação de classes binárias (benignas e malignas) e (2) as sutis diferenças múltiplas classes devido à ampla variabilidade de aparências de imagem de alta resolução, alta coerência de células cancerígenas e extensa heterogeneidade de distribuição de cores. (1) formação profissional e rica experiência de patologistas são tão difíceis de herdar ou inovar que os hospitais e clínicas de nível primário sofrem com a ausência de patologistas qualificados, (2) a tarefa tediosa é caro e demorado e (3) sobre a fadiga dos patologistas pode levar a erros de diagnóstico.
+
+\cite{KRAWCZYK2016} estamos lidando com um problema de desequilíbrio de duas classes, que é um problema desafiador no Aprendizado de Máquina
+
+\cite{XU2016} Um Autoencoder Esparso Empilhado (SSAE), uma instância de uma estratégia de aprendizagem profunda, é apresentado para a detecção eficiente de núcleos em imagens histopatológicas de alta resolução de câncer de mama. O SSAE aprende recursos de alto nível apenas a partir de intensidades de pixel para identificar características distintivas dos núcleos. Uma operação de janela deslizante é aplicada a cada imagem para representar as correções de imagem através de recursos de alto nível obtidos através do codificador automático, que são então subsequentemente alimentados a um classificador que categoriza cada patch de imagem como nuclear ou não nuclear. Em uma coorte de 500 imagens histopatológicas (2200 × 2200) e aproximadamente 3.500 núcleos individuais segmentados manualmente servindo como base, a SSAE demonstrou ter uma medida melhorada de 84,49\% e uma área média sob a curva de precisão (AveP) 78,83\% 
+
+\cite{ZHANG2015} projetamos um framework CBIR alavancando recursos de textura de alta dimensão e métodos baseados em hash para recuperação de imagens em larga escala. Um modelo de hash supervisionado baseado em kernel é introduzido para codificar um vetor de recurso de imagem de alta dimensão para bits binários curtos usando apenas um número limitado de imagens rotuladas. Esses bits binários podem reduzir significativamente a quantidade de memória necessária para armazenar o banco de dados de imagens. A técnica proposta também permite a consulta em tempo real de uma coleção de imagens de milhões de imagens, graças a uma tabela de hash contendo apenas códigos binários.
+
+\cite{KHAN2015} propõe a extração de características baseadas na média geodésica dos descritores de covariância de diversas regiões das imagens histopatológicas. A utilização do descritor de covariância de região tradicional não é adequado para as imagens histopatológicas, devido a heterogeneidade das mesmas. A classificação foi realizada utilizando o algoritmo k-NN para prever o scoring da Atipia Nuclear.
+
+\cite{LI2015} aborda o problema da seleção do espaço de cores para a classificação digital de câncer usando imagens coradas com H e E e investiga a eficácia de vários modelos de cores (RGB, HSV, CIE L $* a * b *$ e modelo de decomposição H e E dependente de mancha ) no diagnóstico do câncer de mama. Extraíram recursos manuais das imagens de cada canal e classificaram com uma SVM, identificando que o espaço de decomposição HeE é o mais adequado.
+
+\cite{TASHK2015} Neste artigo, três tipos de recursos com mais flexibilidade e menor complexidade são empregados. Esses recursos são: padrão binário local concluído (CLBP) como recursos texturais,entropia estattica de momento (SME) e matriz de rigidez (SM) como um modelo matemtico que inclui caracterticas geomricas, morfomricas e baseadas em forma. No método de detecção automática de mitose proposto , esses três tipos de recursos são fundidos entre si. Empregando um kernel defunção de base radial não linear (RBF) paramáquina de vetor de suporte(SVM) e tambémfloresta aleatóriaclassificadores, leva às melhores eficiências entre os outros métodos competitivos que foram propostos no passado. 
+
+\cite{WANG2014} Apresentamos uma abordagem em cascata para detecção de mitose que combina de forma inteligente um modelo CNN e recursos artesanais (características de morfologia, cor e textura). Ao empregar um modelo CNN leve, a abordagem proposta é bem menos exigente em termos computacionais, e a estratégia em cascata de combinar recursos artesanais e recursos derivados da CNN permite a possibilidade de maximizar o desempenho aproveitando os conjuntos de recursos desconectados
+
+\cite{CRUZROA2014} A estrutura global descrita na Figura 1 compreende os seguintes passos: 1) a amostragem em grelha de amostras de imagem é realizada em todas as regiões contendo tecido no WSI; 2) uma rede neural convolucional é treinada a partir de fragmentos amostrados para prever a probabilidade de um patch pertencente ao tecido IDC; e 3) finalmente, um mapa de probabilidades construído sobre o WSI, destacando as regiões IDC previstas.
+
+\cite{LOUKAS2013} desenvolvimento de um sistema de classificação de padrões para a avaliação de imagens de câncer de mama capturadas sob baixa ampliação (× 10). Sessenta e cinco regiões de interesse foram selecionadas de 60 imagens de cortes de tecido de câncer de mama. A análise de textura forneceu 30 recursos texturais por imagem. Três diferentes algoritmos de reconhecimento de padrões foram empregados (kNN, SVM e PNN) para classificar as imagens em três graus de malignidade: I – III.
+
+\cite{ISSACNIWAS2012} seleciona ROIs manualmente, realiza a segmentação e transformação de cor das ROIS e extrai recursos utilizando a Log-Gabor Wavelet
+
+\cite{JELEN2009} Testa três métodos de segmentação de núcleos level set segmentation, fuzzy c–means segmentation and textural segmentation based on co–occurrence matrix, com extração de caracteristicas dessas regiões segmentadas para classifica-las em SOM, MLP, SVM e PCA.
+
+\cite{KRAWCZYK2016} propusemos um sistema de suporte à decisão clínico completo, totalmente automático e altamente preciso, baseado na classificação do conjunto. Nós lidamos com um problema desequilibrado em que a classe minoritária correspondia ao grau de malignidade mais alto (e, portanto, mais importante para detectar). Nós discutimos três métodos diferentes para segmentação de slides PAAF e extração de características . Na base deles, nós treinamos um novo classificador de conjunto chamado EUSBoost. Combinou um esquema de reforço com a subamostragem evolutiva. Isso nos permitiu realizar uma subamostragem guiada da classe majoritária, selecionando os objetos mais importantes para a etapa de treinamento do classificador. Adicionalmente, incorporando uma medida de diversidade no algoritmo evolucionário. Conseguimos assegurar que os classificadores são mutuamente complementares.
+
+\section{SQ1 Quais as técnicas de aprendizado de máquina utilizadas para a detecção do câncer de mama?}
+
+
+\cite{GUO2019} Propõe a utilização de uma estrutura de segmentação de regiões de câncer rápida e refinada, intitulada v3\_DCNN, utilizando o modelo Inception\-V3 para realizar uma classificação de regiões do tumor, e finalmente uma DCNN para a segmentação semântica do tumor. Utilizou data augmentation como mirror flip, rotation, color jittering no estágio de treinamento.
+
+\cite{YAN2019}  A utilização de rotações das imagens e flip simula uma ambiente real, pois diferentemente de imagens radiologicas, por exemplo, não existe uma orientação fixa adotada pelos patologistas.
+Utilizou a Inception\-V3 pré-treinada para extração de características e uma rede LSTM para classificação em quatro classes.
+
+\cite{MITTAL2019} Utilizou uma segmentação baseada em superpixels. Esta consiste basicamente na definição de regiões significativas delimitadas por informações dos pixels que compõe determinada região. Propõe um novo método para a segmentação dos núcleos. A técnica é uma abordagem inteligente não supervisionada, que é baseada em um intelligent gravitational search algorithm based superpixel clustering, com a modificação da equação de atualização de posição de um GSA tradicional.
+
+\cite{SABEENABEEVI2019} utilizou uma técnica para detecção de núcleos e extraiu patches de 25x25 para classificação utilizando transfer learning em uma CNN (VGGNet). Após o treinamento, removem a camada softmax da rede, para que a mesma funcione como um extrator de características. Com isso, obtem um vetor de recursos com tamanho de 4096. Neste ponto utilizam o Principal Component Analysis reduzindo o tamanho do vetor para 650. Feito isso, processam esse último vetor em quatro técnicas de classificação, Support Vector Machines (SVM), Linear Discriminant Analysis (LDA), Random Forest (RF) e k-Nearest Neighbours. Obtendo a maior acurácia com a RF.
+
+\cite{ALOM2019} utilizou técnicas de aumento de dados como, rotação, inversão, corte e translação. E a rede Inception Recurrent Residual Convolutional Neural Network (IRRCNN) para realizar a classificação das imagens. Este modelo, tem como principal vantagem a utilização do mesmo número de parametros de rede e fornecendo um desempenho melhor se comparado as RCNN e Redes Residuais.
+
+\cite{MURTAZA2019} realizou o treinamento de modelos baseados na arquitetura AlexNet, para classificação em multiníveis. O primeiro nível, responsável por classificar em benigno e maligno. O segundo, em classificar nos subtipos de cada um dos dois anteriores. A rede utilizada foi pré-treinada, com a remoção das últimas camadas totalmente conectadas. Após o treinamento, removeu novamente estas camadas e utilizou os modelos como extratores de caracteristicas para utilizar como vetores de entrada em algoritmos de ML clássicos, como K-NN, SCM, NB, DT, LDA e Regressão Linear. Utilizou dimensional reduction para extrair os recursos mais significativos. O melhor desempenho foi obtido foi utilizando IG e K-NN.
+
+\cite{VO2019} Utilizou data augmentation. Utilizou três modelos Inception-ResNet-v2 que funcionaram como extratores de características, cada um processando uma escala de imagem diferente. Após, os recursos de cada modelo foram classificados em três Gradient Bossting Trees em quatro classes, normal, benign, in situ e invasive. Com o resultado de cada árvore, realizou uma votação majoritária para classificação final em cada uma das classes.
+
+\cite{DAS2019} utilizou data augmentation para balancear as classes de células mitóticas e não mitóticas. Ele extraiu patches de tamanho de 81x81 pixels.
+
+\cite{GHAZVINIANZANJANI2019} utiliza data augmentation em real time, isso leva ao treinamento uma ampla gama de variações durante o treinamento, colaborando para evitar o overfitting. Além disso, realiza uma comparação entre a utilização de compressão de imagens antes do treinamento, indicando que tal técnica não afeta estatisticamente os resultados. Porém, uma limitação desta técnica é que a utilização de compressão de imagens não é uma técnica aprovada na medicina. Contudo, é uma técnica que pode vir de encontro a limitação de processamento das imagens histopatológicas devido ao seu tamanho.
+
+
+\cite{ALQUDAH2019} diferentemente dos trabalhos anteriores, esse utiliza LBP (Local Binary Partners) para extrair caracteristicas e processa-las em um SVM. Para isso ele extrai patches não sobrepostos das imagens, classifica-os na SVM e utiliza uma Majority voting technique para definir a qual classe aquele caso pertence.
+
+\cite{GANDOMKAR2018b} utilizou quatro redes ResNet pré-treinadas, uma para cada ampliação da base BreakHis para classificar-las em benigna ou maligna, ao final, a classificação final foi feita com uma meta-decision tree, indicando se o caso é benigno ou maligno.
+
+\cite{BAKER2018} selecionou manualmente regiões de interesse, que foram então segmentadas utilizando o k-means em 3 clusters. Após, aplicou a segmentação por bacias hidrográficas e operações morfológicas. Para por fim, extrair recursos manualmente das imagens, como área e perímetro do núcleo. Realizou uma classificação baseada em regras e um árvore de decisão, obtendo o melhor resultado com a decision tree.
+
+\cite{FONDON2018} o método proposto é baseado no cálculo de três conjuntos de características extraídas e relacionadas aos núcleos, regiões de cor e texturas, considerando caraterísticas locais e globais. Realizaram diversos testes obtendo o melhor resultado com uma SVM de kernel quadrático. Testando em três conjuntos de dados diferentes.
+
+\cite{PAN2018} utilizou rotações, zoom, inversão horizontal e vertical como aumento de dados.
+
+\cite{BARDOU2018} comparou a utilização de técnicas de extração manual de recursos com o uso de CNN, conforme a metodologia adotada por ele as CNN apresentaram um melhor resultado.
+
+\cite{LI2018} uma arquitetura interessante é proposta por \cite{LI2018}, ele utiliza uma Faster R-CNN para delimitar regiões com a presença da mitose.
+
+\cite{ZHENG2018} realiza uma série de pré-processamentos, como decovolução do espaço de cores, normalização, e conversão do espaço de cores, segmentação das WSI em superpixels, e realiza uma Recuperação baseada em conteúdo (CBIR) para cada superpixel, baseado em features extraídas e armazenadas em um BD de regiões conhecidas para indicar a probabilidade de tal superpixel representar uma malignidade.
+
+\cite{GANDOMKAR2018a} In the first stage, for each magnification factor, a deep residual network (ResNet) with 152 layers has been trained for classifying patches from the images as benign or malignant. In the next stage, the images classified as malignant were subdivided into four cancer subcategories and those categorized as benign were classified into four subtypes. Finally, the diagnosis for each patient was made by combining outputs of ResNets’ processed images in different magnification factors using a meta-decision tree.
+
+\cite{OLIVEIRA2018} utiliza uma técnica conhecida como Multiple-Instance Learning (MIL), que consiste em agrupar conjuntos de imagens ou informações em bolsas sem uma rotulação individual e sim uma global. Assim, para que um conjunto seja considerado uma instância negativa todos os elementos necessitam ser negativos. Caso contenha apenas uma instância positiva, toda a bolsa é considerada como positiva. Neste trabalho, são testados doze métodos de MIL. Para realizar o treinamento e validação dos métodos, são extraídos vetores de características pelo método de Parameter-Free Threshold Adjacency Statistics.
+
+\cite{HAN2017} realiza uma multi classificação das imagens da BreakHis utilizando a GoogleNet com um redimensionamento das imagens para 256x256 pixels
+
+\cite{BEJNORDI2017} a context-aware stacked convolutional neural network architecture was used for classifying whole slide images as benign, ductal carcinoma in situ, or invasive ductal carcinoma.
+
+\cite{PAN2017} Neste trabalho, propomos um duto automático de processamento de imagens capaz de detectar e segmentar com precisão núcleos em imagens patológicas da mama. Primeiro, a reconstrução esparsa com algoritmos K-SVD e Batch-OMP é empregada para melhorar a área do núcleo e remover preliminarmente o plano de fundo. Além disso, o estágio de segmentação explora o DCN treinado com rótulos estruturais para obter os pixels precisos dos núcleos das células. Finalmente, operações morfológicase alguns conhecimentos prévios são introduzidos para melhorar o desempenho de segmentação e reduzir os erros.
+
+\cite{SPANHOL2017} objetivo é fazer uso de uma CNN pré-treinada para extrair recursos do DeCAF, de diferentes camadas da rede, para entender se esses recursos são bons o suficiente para competir com descritores de recursos visuais 
+
+o DeCAF baseia-se na aprendizagem por representação, onde os parâmetros de uma rede neural são aprendidos de forma que os dados brutos, isto é, os pixels das imagens, possam ser convertidos em uma representação de alto nível [20] . A principal diferença entre os recursos do DeCAF e o padrão atual de usar CNNs [4] , [6] , [21] é que um CNN previamente treinado é simplesmente reutilizado como extrator de recurso, cuja saída é alimentada em outro classificador, treinado em dados específicos do problema.
+
+\cite{WAHAB2017} In Phase-1 a CNN is then trained on the segmented out 80×80 pixel patches based on a standard dataset. Hard non-mitotic examples are identified and augmented; mitotic examples are oversampled by rotation and flipping; whereas non-mitotic examples are undersampled by blue ratio histogram based k-means clustering. Based on this information from Phase-1, the dataset is modified for Phase-2 in order to reduce the effects of class imbalance.
+
+\cite{ZHANG2016} This motivates us to investigate how to fuse results from these features to enhance the accuracy. Particularly, we employ content-based image retrieval approaches to discover morphologically relevant images for image-guided diagnosis, using holistic and local features, both of which are generated from the cell detection results by a stacked sparse autoencoder. Because of the dramatically different characteristics and representations of these heterogeneous features (i.e., holistic and local), their results may not agree with each other, causing difficulties for traditional fusion methods. In this paper, we employ a graph-based query-specific fusion approach where multiple retrieval results (i.e., rank lists) are integrated and reordered based on a fused graph.
+
+\cite{CHAN2016} calculou a dimensão fractal das imagens e processou em uma SVM.
+
+\cite{KORKMAZ2016} classificação do câncer de mama utilizando três classificadores: Jensen Shannon, Hellinger, and Triangle. A diferença deste método é a utilização das imagens histopatológicas com as mamografias dos pacientes. Utiliza features extraidas manualmente.
+
+\cite{SPANHOL2016} utilizou uma rede CNN da arquitetura AlexNet para realizar a classificação das imagens histopatológicas.
+
+\cite{BAYRANOGLU2016} propusemos uma estrutura geral baseada em CNNs para o aprendizado das características da imagem histopatológica do câncer de mama. A estrutura proposta é independente da ampliação microscópica e mais rápida que os métodos anteriores, já que requer treinamento único. As propriedades de independência de velocidade e ampliação são alcançadas sem sacrificar o desempenho de última geração. Modelos independentes de ampliação são escaláveis, novas imagens de treinamento de qualquer nível de ampliação podem ser utilizadas e modelos treinados podem ser facilmente ajustados (ajuste fino) através da introdução de novas amostras.
+
+\pagebreak
+\section{Future Works}
+
+Furthermore, the system can extend to extract more features from each window and fuse these features to increase the accuracy of the system. In the future, we plan to make a comparison between different machine learning algorithms. \citep{ALQUDAH2019}
+
+Antes que esse estudo possa ser efetivamente realizado, o sistema computadorizado precisa ser aprimorado para que sua saída seja apresentada de uma maneira que possa ser facilmente interpretada pelos patologistas. Isso envolverá o desenvolvimento de modelos intermediários para mapear os recursos da imagem nos descritores que os patologistas usam para classificação. Além de tornar a saída do sistema mais interpretável, também aumentaremos o tamanho do banco de dados do estudo para testes mais extensos do sistema desenvolvido. Uma vez atingidos esses dois objetivos, um estudo de leitor envolvendo um painel de patologistas com diferentes níveis de experiência será realizado para avaliar o valor incremental do sistema computadorizado como um segundo leitor. \citep{DUNDAR2011}
+
+
+Para o trabalho futuro, normalização de manchas, arquiteturas mais profundas e divisão da rede antes que a última camada totalmente conectada possa ser investigada. Seria interessante observar a parada antecipada em tarefas na arquitetura de múltiplas tarefas. Mais importante, dados adicionais com aumento do número de pacientes devem ser introduzidos. Acreditamos que as CNNs são mais promissoras na classificação das imagens histopatológicas do câncer de mama do que os recursos artesanais e os dados são a questão principal para obter modelos mais robustos. \citep{BAYRANOGLU2016}
+
+No futuro, exploraremos métodos que podem produzir etiquetas mais precisas em pixels para as anotações do centróide , para que possamos treinar detectores mais poderosos no conjunto de dados MITOSIS de 2014. Além disso, estudaremos como integrar as redes DeepSeg, DeepDet e DeepVer propostas em uma rede de ponta a ponta treinada usando anotações clínicas fracas. Além disso, exploraremos como construir um sistema completo para prever a pontuação da proliferação tumoral diretamente de todas as imagens dos slides. \citep{LI2018}
+
+Further work will focus on studying more discriminative features for histopathological images and a more efficient retrieval scheme for large-scale WSI databases. \citep{ZHENG2018}
+
+where future work with larger data sets with more detailed training labels have the promise to result in systems that are useful to pathologists in clinical applications. \citep{GECER2018}
+
+we will integrate the Stacked Sparse Autoencoder framework with cell-graph based feature extraction methods to better characterize breast histopathological images. \citep{XU2016}
+
+Trabalhos futuros se concentrarão em aplicações clínicas que empregam os recursos propostos, como análise de imagens de slides inteiras e recuperação de imagens histopatológicas com base em conteúdo. \citep{ZHENG2017}
+
+Em trabalhos futuros, nosso objetivo é validar a abordagem em um conjunto de dados maior e estender-se a diferentes tipos de câncer. Além disso, também planejamos investigar outros modelos estatísticos para melhorar a precisão da detecção de mitose. \citep{WAN2017b}
+
+Future extensions of this study will aim towards the investigation of the combination of feature extraction and pattern classification methods on breast cancer images obtained at both low and high magnifications in order to assess potential improvements in the classification accuracy and to obtain a more comprehensive characterization of the tumor malignancy. \citep{LOUKAS2013}
+
+O ruído é um problema predominante nas imagens médicas e pode ter um efeito significativo nos resultados. Algumas fontes comuns de ruído incluem manchas brancas nas lâminas após a desparafinação, manchas visíveis no tecido após a hidratação e manchas irregulares. Foi relatado que os efeitos em lote podem levar a enormes diferenças em recursos extraídos de imagens ( Mathews et al., 2016) Para as imagens histopatológicas utilizadas neste artigo, é fato que as diferenças de resolução, contraste e aparência entre imagens da mesma classe são muito mais aparentes do que as de diferentes classes. A variação das imagens histopatológicas refinadas do câncer de mama resulta em dificuldades ao tentar classificar uma imagem como benigna, maligna ou outra categoria específica. Como podemos evitar ou reduzir a influência na análise de imagens histopatológicas do câncer de mama a partir dessas questões será o foco do nosso trabalho futuro. \citep{XIE2019}
+
+No futuro, o método proposto pode ser estendido usando conceitos avançados de segmentação, como segmentação difusa. Além disso, outros critérios de segmentação, como erro de deslocamento de limite ou similaridade estrutural, podem ser explorados como funções objetivas para aprimorar a precisão da segmentação. Além disso, a paralelização do método proposto pode ser investigada para lidar com os grandes conjuntos de dados histológicos . \citep{MITTAL2019}
+
+Como trabalho futuro, uma direção é melhorar a precisão do reconhecimento dos recursos do DeCAF usando patches. Uma investigação mais aprofundada sobre o tamanho das amostras, bem como sobreposições, pode ser benéfica para aumentar a precisão obtida com os recursos do DeCAF. Outra investigação que pode produzir bons resultados é a combinação desses recursos com outros descritores visuais e CNNs específicas de tarefas, para explorar a complementaridade dessas abordagens. Além disso, uma melhor investigação sobre a seleção de recursos e classificadores também pode melhorar o desempenho. \citep{SPANHOL2017}
+
+Como trabalho futuro, atualmente estamos empenhados em experimentar outras estruturas de aprendizado profundo ( Spanhol, Cavalin, Oliveira, Petitjean e Heutte, 2017 ). Com a aceleração das propostas nessa área, não há dúvida de que serão propostas redes mais eficientes no futuro próximo. Atualmente, o uso da CNN e, mais geralmente, da IA ​​ou da tecnologia baseada na aprendizagem é limitado para ajudar o clínico na decisão final. Além de melhorar a precisão do processo de tomada de decisão , a pesquisa também deve se concentrar em extrair os recursos que são importantes para a classificação da imagem do câncer. Esses recursos fornecerão informações sobre áreas específicas a serem examinadas e os especialistas poderão se concentrar nessas áreas ( Xu et al., 2017) Ao considerar a imagem como um saco e pixels como as instâncias, a MIL oferece uma estrutura adequada para a segmentação histopatológica da imagem , para identificar a posição da região maligna \citep{OLIVEIRA2018}
+
+Trabalhos futuros incluem a extração de características discriminatórias do núcleo segmentado que podem ser correlacionadas com o sistema Bloom-Richardson para classificar o câncer de mama, o que permitirá o estadiamento automático do tecido para explicações mais analíticas para o estadiamento do câncer de mama. As imagens microscópicas da biópsia do tecido mamário são utilizadas neste trabalho. Existe uma tarefa potencial a ser usada para diagnosticar outras imagens de biópsia de pulmão, próstata, colo uterino e bexiga, etc. imagens de biópsia de tecidos. Experiências adicionais com mais número de amostras com seleção automatizada da região de interesse de toda a imagem do slide seriam realizadas em um futuro próximo. Como a maioria dos nódulos detectados na triagem é de natureza benigna, se um dispositivo de triagem automatizado puder separar de maneira confiável os benignos dos anormais, a avaliação microscópica manual poderá ser confirmada apenas aos anormais pré-selecionados. Para que mais mulheres possam ser rastreadas sem uso excessivo de recursos no programa de rastreamento populacional.\citep{ISSACNIWAS2012}
+
+Uma investigação mais aprofundada do nosso modelo melhorará seu desempenho. Por exemplo, vários parâmetros livres (  �� , �� , tamanho do patch, número de unidades ocultas e número de camadas ocultas) precisam ser configurados individualmente para diferentes bancos de dados na presente implementação. Determinar valores ótimos para esses parâmetros livres é um desafio. Portanto, é necessária a exploração de resultados teóricos adicionais por meio da seleção de parâmetros e investigação adicional do desempenho do modelo DNN por extensão a uma arquitetura completa ou pela combinação de redes neurais avançadas.\citep{FENG2018}
+
+Em nosso trabalho futuro, examinaremos mais tipos de recursos, especialmente aqueles decorrentes de segmentação e arquiteturas. Além disso, incorporaremos técnicas apropriadas de fusão de recursos para projetar um método de hash híbrido, de modo que vários tipos de recursos possam ser sistematicamente fundidos para aumentar a precisão da recuperação de imagens. Também avaliaremos nossa estrutura em mais aplicações na análise histopatológica de imagens.\citep{ZHANG2015}
+
+No futuro, testaremos nosso método em conjuntos de dados maiores (por exemplo, milhares de imagens) e empregaremos mais recursos para fusão. \citep{ZHANG2016}
+
+As direções futuras incluem estender nosso conjunto de dados para envolver anotações manuais de ROI do DCIS e outros tumores que confundem apresentações não malignas. Além disso, procuraremos potencialmente combinar nossa abordagem com a FCN em conjunto com as GPUs para acelerar ainda mais a análise e o interrogatório de grandes imagens de slides inteiras. \citep{CRUZROA2018}
+
+
+
+
+
+\pagebreak
+\section*{References}
+
+% \bibliographystyle{elsarticle-harv}
+\bibliography{references}
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
