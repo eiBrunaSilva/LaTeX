@@ -1,4 +1,4 @@
 # LaTeX
  LaTeX course held remotely with Professor Felipe Andre Zeiser
 
-![image](https://user-images.githubusercontent.com/68930726/117336818-fe3f5400-ae72-11eb-93f7-8e77d5e8beed.png)
+![image](https://user-images.githubusercontent.com/68930726/117336914-1d3de600-ae73-11eb-9f48-1072954bad15.png)
